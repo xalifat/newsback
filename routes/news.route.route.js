@@ -7,7 +7,7 @@ router.post('/news', newsController.createNews)
 router.patch('/news/:id', newsController.editNews)
 router.post('/news/:id', newsController.getNewsById)
 router.delete('/news/:id', newsController.deleteNews)
-router.get('/news/:id', newsController.getNewsByCateg)
+router.get('/news/category/:id', newsController.getNewsByCateg)
 // localStorage.../news/5785856685
 // req.params  =  {id: 5785856685}
 

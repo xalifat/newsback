@@ -1,10 +1,6 @@
 const Categories = require("../model/Categories.model");
 
-
-
-
 module.exports.categoriesController = {
-	
 	createCategories: (req, res) => {
 		Categories.create({
 			name: req.body.name

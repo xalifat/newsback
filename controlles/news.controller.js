@@ -1,8 +1,5 @@
 const News = require("../model/News.model");
 
-
-
-
 module.exports.newsController = {
 
 	createNews: (req, res) => { // добавление новости 
@@ -37,6 +34,6 @@ module.exports.newsController = {
 		News.findById(req.params.id).then(() => res.json('вывод определенной новости')).catch((err) => console.log(err))
 	},
 	getNewsByCateg: (req, res) => {
-		News.find({categoriesId: req.body.categoriesId}).then(() => res.json('вывод всех новостей из определенной категории')).catch((err) => res.json(er))
+		News.find({ categoriesId: req.params.id }).then(() => res.json('вывод всех новостей из определенной категории')).catch((err) => res.json(er))
 	}
 }
